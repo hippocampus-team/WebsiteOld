@@ -3,7 +3,9 @@
     <div class="content-wrapper">
       <Card v-for="(card, i) in cards" :key="i"
             :title="card.title"
-            :text="card.text"/>
+            :text="card.text"
+            :isAchievement="card.isAchievement"
+            :buttons="card.buttons"/>
     </div>
   </div>
 </template>
@@ -20,32 +22,45 @@ export default {
     return {
       cards: [
         {
-          title: "Title",
-          text: "text!",
-          isAchievement: false,
+          title: "ScreenPuzzle",
+          text: "Приложение Сони, которое позволяет собирать мобильные видеостены самых различных форм из подручных Android устройств.",
+          isAlternative: false,
           buttons: [
             {
-              text: "Click",
-              color: "#ffffff",
-              link: "url"
+              text: "Видео",
+              color: "#333333",
+              link: "https://youtu.be/yk01QIdEeVM"
+            },
+            {
+              text: "GitHub",
+              color: "#FF4F6D",
+              link: "https://github.com/DablSi/Screen-3.0"
             }
           ]
         },
         {
           title: "More Content",
-          text: "More text!"
+          text: "More text!",
+          isAchievement: false,
+          buttons: []
         },
         {
           title: "Title",
-          text: "text!"
+          text: "text!",
+          isAchievement: false,
+          buttons: []
         },
         {
           title: "Title",
-          text: "text!"
+          text: "text!",
+          isAchievement: false,
+          buttons: []
         },
         {
           title: "Title",
-          text: "text!"
+          text: "text!",
+          isAchievement: true,
+          buttons: []
         },
       ]
     }
