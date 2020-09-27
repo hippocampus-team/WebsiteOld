@@ -13,7 +13,7 @@ export default {
       textColorClass: textColorToClass(this.textColor),
       uppertextColorClass: textColorToClass(this.uppertextColor),
       alignTextClass: {
-        "reverse-text": this.reverseAlign === "true"
+        "reverse-text": this.reverseAlign
       }
     }
   },
@@ -22,7 +22,7 @@ export default {
     uppertext: String,
     textColor: String,
     uppertextColor: String,
-    reverseAlign: String
+    reverseAlign: Boolean
   },
   filters: {
     uppercase(text) {

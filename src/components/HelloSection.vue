@@ -49,6 +49,7 @@ export default {
     font-size: 34px;
     line-height: 42px;
     font-weight: bold;
+    color: base.$onBackgroundColor;
 
     span {
       color: base.$secondaryColor;
