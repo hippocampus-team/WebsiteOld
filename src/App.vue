@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <TitleText text="Hippocampus" uppertext="Команда"/>
+    <div id="page-wrapper">
+      <TitleText text="Hippocampus" text-color="primary"
+                 uppertext="Команда" uppertext-color="onBackground"/>
+    </div>
   </div>
 </template>
 
@@ -17,7 +19,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#app {
+#page-wrapper {
   margin: $unit;
 }
 </style>
