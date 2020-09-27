@@ -34,6 +34,18 @@ export default {
   justify-content: center;
   align-items: center;
 
+  transition: all 150ms;
+
+  &:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+  }
+
+  &:focus {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+  }
+
   h3 {
     font-size: 28px;
     line-height: 32px;

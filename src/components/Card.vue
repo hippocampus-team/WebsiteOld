@@ -47,9 +47,16 @@ export default {
 
   color: base.$onSurfaceColor;
 
+  transition: all 600ms;
+
   &.variation {
     background-color: base.$secondaryColor;
     color: base.$onSecondaryColor;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 80px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
   }
 }
 
