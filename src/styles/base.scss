@@ -1,0 +1,54 @@
+$primaryColor: #924FE0;
+$secondaryColor: #5A6AFF;
+$backgroundColor: #F3F3F3;
+$surfaceColor: #FFFFFF;
+
+$onPrimaryColor: #FFFFFF;
+$onSecondaryColor: #FFFFFF;
+$onBackgroundColor: #222222;
+$onSurfaceColor: #222222;
+
+$dividerColor: rgba(0, 0, 0, 0.12);
+
+$unit: 8.33333vw;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Rubik:700);
+
+body {
+  background-color: $backgroundColor;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+ul,
+a,
+span {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+input,
+textarea,
+ul,
+a,
+span {
+  font-family: Montserrat, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Rubik, sans-serif;
+}

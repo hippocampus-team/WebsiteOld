@@ -1,28 +1,23 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TitleText text="Hippocampus" uppertext="Команда"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TitleText from './components/TitleText.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TitleText
   }
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: $unit;
 }
 </style>
