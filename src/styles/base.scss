@@ -15,40 +15,26 @@ $unit: 8.33333vw;
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Rubik:700);
 
-body {
-  background-color: $backgroundColor;
+.text-color-primary {
+  color: $primaryColor;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-textarea,
-ul,
-a,
-span {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.text-color-secondary {
+  color: $secondaryColor;
 }
 
-p,
-input,
-textarea,
-ul,
-a,
-span {
-  font-family: Montserrat, sans-serif;
+.text-color-on-primary {
+  color: $onPrimaryColor;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Rubik, sans-serif;
+.text-color-on-secondary {
+  color: $onSecondaryColor;
+}
+
+.text-color-on-background {
+  color: $onBackgroundColor;
+}
+
+.text-color-on-surface {
+  color: $onSurfaceColor;
 }
