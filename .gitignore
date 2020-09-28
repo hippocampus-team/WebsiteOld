@@ -23,5 +23,5 @@ pnpm-debug.log*
 *.sw?
 
 # Generated files
-*.css
-*.css.map
+/src/**/*.css
+/src/**/*.css.map

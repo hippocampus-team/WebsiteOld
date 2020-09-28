@@ -1,0 +1,29 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #F3F3F3;
+}
+
+p,
+input,
+textarea,
+ul,
+a,
+span {
+    font-family: Montserrat, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Rubik, sans-serif;
+}
