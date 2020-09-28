@@ -41,8 +41,8 @@ function textColorToClass(color) {
 
 </script>
 
-<style scoped lang="scss">
-  a {
+<style lang="scss">
+  .title-wrapper a {
     font-family: Rubik, sans-serif;
     text-decoration: none;
   }
