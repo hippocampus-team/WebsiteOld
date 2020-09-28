@@ -3,17 +3,20 @@
     <HelloSection/>
     <BioSection/>
     <CardsSection/>
+    <ContactSection/>
   </div>
 </template>
 
 <script>
 import HelloSection from '@/components/sections/HelloSection.vue'
 import BioSection from "@/components/sections/BioSection.vue";
-import CardsSection from "@/components/sections/CardsSection";
+import CardsSection from "@/components/sections/CardsSection.vue";
+import ContactSection from "@/components/sections/ContactSection.vue";
 
 export default {
   name: 'App',
   components: {
+    ContactSection,
     CardsSection,
     HelloSection,
     BioSection
@@ -37,6 +40,6 @@ export default {
 
 .content-wrapper {
   position: relative;
-  margin: base.$unit;
+  margin: base.$unit base.$unit 0;
 }
 </style>

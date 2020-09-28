@@ -42,8 +42,8 @@ export default {
   height: base.$unit * 3;
 
   background-color: base.$surfaceColor;
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
   border-radius: 60px;
+  @include base.default-box-shadow();
 
   color: base.$onSurfaceColor;
 
@@ -55,7 +55,7 @@ export default {
   }
 
   &:hover {
-    box-shadow: 0 4px 80px rgba(0, 0, 0, 0.25);
+    @include base.default-box-shadow-hover();
     transform: translateY(-4px);
   }
 }

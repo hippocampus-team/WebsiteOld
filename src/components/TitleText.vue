@@ -1,7 +1,10 @@
 <template>
   <div class="title-wrapper">
-    <h2 :class="[uppertextColorClass, alignTextClass]">{{uppertext | uppercase}}</h2>
-    <h1 :class="[textColorClass, alignTextClass]">{{text | uppercase}}</h1>
+    <h2 v-if="upperLink == null" :class="['uppertext', uppertextColorClass, alignTextClass]">{{uppertext | uppercase}}</h2>
+    <a v-else :class="['uppertext', uppertextColorClass, alignTextClass]"
+       :href="upperLink">{{uppertext | uppercase}}</a>
+
+    <h1 :class="['text', textColorClass, alignTextClass]">{{text | uppercase}}</h1>
   </div>
 </template>
 
@@ -22,7 +25,8 @@ export default {
     uppertext: String,
     textColor: String,
     uppertextColor: String,
-    reverseAlign: Boolean
+    reverseAlign: Boolean,
+    upperLink: String
   },
   filters: {
     uppercase(text) {
@@ -38,7 +42,12 @@ function textColorToClass(color) {
 </script>
 
 <style scoped lang="scss">
-  h1 {
+  a {
+    font-family: Rubik, sans-serif;
+    text-decoration: none;
+  }
+
+  .text {
     font-size: 102px;
 
     @media screen and (max-width: base.$mwLarge) {
@@ -50,7 +59,7 @@ function textColorToClass(color) {
     }
   }
 
-  h2 {
+  .uppertext {
     font-size: 62px;
 
     @media screen and (max-width: base.$mwLarge) {

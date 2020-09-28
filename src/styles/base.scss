@@ -18,6 +18,14 @@ $mwMedium: 1460px;
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,700);
 @import url(https://fonts.googleapis.com/css?family=Rubik:700);
 
+@mixin default-box-shadow() {
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
+}
+
+@mixin default-box-shadow-hover() {
+  box-shadow: 0 4px 80px rgba(0, 0, 0, 0.25);
+}
+
 .text-color-primary {
   color: $primaryColor;
 }
