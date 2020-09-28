@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import HelloSection from '@/components/HelloSection.vue'
-import BioSection from "@/components/BioSection.vue";
-import CardsSection from "@/components/CardsSection";
+import HelloSection from '@/components/sections/HelloSection.vue'
+import BioSection from "@/components/sections/BioSection.vue";
+import CardsSection from "@/components/sections/CardsSection";
 
 export default {
   name: 'App',

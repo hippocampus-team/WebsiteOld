@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import TitleText from './TitleText.vue'
+import TitleText from '@/components/TitleText.vue'
 
 export default {
   name: 'HelloSection',
@@ -66,6 +66,6 @@ export default {
   width: base.$unit * 6;
   height: base.$unit * 7;
 
-  background: url("../assets/brain-blob.svg") 0 0/100% auto no-repeat;
+  background: url("../../assets/brain-blob.svg") 0 0/100% auto no-repeat;
 }
 </style>
