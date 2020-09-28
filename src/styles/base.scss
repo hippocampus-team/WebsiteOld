@@ -12,7 +12,10 @@ $dividerColor: rgba(0, 0, 0, 0.12);
 
 $unit: 8.33333vw;
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+$mwLarge: 1660px;
+$mwMedium: 1460px;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,700);
 @import url(https://fonts.googleapis.com/css?family=Rubik:700);
 
 .text-color-primary {

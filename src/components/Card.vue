@@ -62,17 +62,18 @@ export default {
 
 .card-title {
   margin: 40px 40px 0 40px;
-  font-size: 42px;
   font-weight: bold;
+  font-size: 2vw;
   line-height: 86%;
 }
 
 .card-text {
   margin: 28px 40px 40px;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 130%;
+  font-weight: 500;
   text-align: justify;
+  line-height: 130%;
+
+  font-size: 1.2vw;
 }
 
 .buttons-wrapper {

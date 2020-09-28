@@ -46,10 +46,22 @@ export default {
 
   .hello-text {
     width: base.$unit * 6;
-    font-size: 34px;
-    line-height: 42px;
+
+    font-size: 32px;
+    line-height: 46px;
+
     font-weight: bold;
     color: base.$onBackgroundColor;
+
+    @media screen and (max-width: base.$mwLarge) {
+      font-size: 28px;
+      line-height: 42px;
+    }
+
+    @media screen and (max-width: base.$mwMedium) {
+      font-size: 24px;
+      line-height: 40px;
+    }
 
     span {
       color: base.$secondaryColor;

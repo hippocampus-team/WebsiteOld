@@ -22,7 +22,7 @@ export default {
     return {
       cards: [
         {
-          title: "ScreenPuzzle",
+          title: "Screen Puzzle",
           text: "Приложение Сони, которое позволяет собирать мобильные видеостены самых различных форм из подручных Android устройств.",
           isAlternative: false,
           buttons: [

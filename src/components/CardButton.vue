@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss">
 .card-button {
-  height: 100px;
+  padding: 20px 0;
 
   text-decoration: none;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
@@ -36,6 +36,10 @@ export default {
 
   transition: all 150ms;
 
+  @media screen and (max-width: base.$mwMedium) {
+    padding: 16px 0;
+  }
+
   &:hover {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     transform: translateY(-4px);
@@ -47,8 +51,8 @@ export default {
   }
 
   h3 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 1.5vw;
+    line-height: 86%;
     color: base.$onPrimaryColor;
   }
 }

@@ -39,11 +39,27 @@ function textColorToClass(color) {
 
 <style scoped lang="scss">
   h1 {
-    font-size: 110px;
+    font-size: 102px;
+
+    @media screen and (max-width: base.$mwLarge) {
+      font-size: 86px;
+    }
+
+    @media screen and (max-width: base.$mwMedium) {
+      font-size: 70px;
+    }
   }
 
   h2 {
     font-size: 62px;
+
+    @media screen and (max-width: base.$mwLarge) {
+      font-size: 52px;
+    }
+
+    @media screen and (max-width: base.$mwMedium) {
+      font-size: 42px;
+    }
   }
 
   .reverse-text {
