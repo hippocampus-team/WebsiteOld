@@ -84,6 +84,11 @@ export default {
   display: flex;
   flex-direction: column;
   gap: base.$unit / 2;
+
+  @media screen and (max-width: base.$mwNormal) {
+    top: 0;
+    gap: 0;
+  }
 }
 
 .projects-title {
@@ -102,6 +107,7 @@ export default {
 
 #bio-section {
   height: base.$unit * 10;
+  overflow: visible;
 }
 
 #bio-section:before {
@@ -115,5 +121,6 @@ export default {
 
   background: url("../../assets/bio-blob.svg") 0 0/100% auto no-repeat;
   z-index: 0;
+  overflow: visible;
 }
 </style>

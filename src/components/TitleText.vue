@@ -55,7 +55,11 @@ function textColorToClass(color) {
     }
 
     @media screen and (max-width: base.$mwMedium) {
-      font-size: 70px;
+      font-size: 74px;
+    }
+
+    @media screen and (max-width: base.$mwNormal) {
+      font-size: 64px;
     }
   }
 
@@ -67,7 +71,11 @@ function textColorToClass(color) {
     }
 
     @media screen and (max-width: base.$mwMedium) {
-      font-size: 42px;
+      font-size: 46px;
+    }
+
+    @media screen and (max-width: base.$mwNormal) {
+      font-size: 36px;
     }
   }
 

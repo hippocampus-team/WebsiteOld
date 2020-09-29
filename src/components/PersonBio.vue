@@ -32,7 +32,7 @@ export default {
     font-weight: 400;
     text-align: justify;
     line-height: 140%;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
   }
 }
 </style>

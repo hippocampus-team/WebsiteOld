@@ -60,6 +60,14 @@ export default {
   flex-direction: row;
   justify-content: space-between;
 
+  @media screen and (max-width: base.$mwMedium) {
+    padding: 56px;
+  }
+
+  @media screen and (max-width: base.$mwNormal) {
+    border-radius: 40px;
+  }
+
   .contacts-wrapper {
     display: flex;
     flex-direction: column;

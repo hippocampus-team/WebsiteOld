@@ -40,12 +40,14 @@ export default {
 
   width: base.$unit * 3;
   height: base.$unit * 3;
+  box-sizing: border-box;
 
   background-color: base.$surfaceColor;
-  border-radius: 60px;
   @include base.default-box-shadow();
 
   color: base.$onSurfaceColor;
+  border-radius: 60px;
+  padding: 40px;
 
   transition: all 600ms;
 
@@ -58,17 +60,26 @@ export default {
     @include base.default-box-shadow-hover();
     transform: translateY(-4px);
   }
+
+  @media screen and (max-width: base.$mwNormal) {
+    border-radius: 40px;
+    padding: 32px;
+  }
 }
 
 .card-title {
-  margin: 40px 40px 0 40px;
   font-weight: bold;
   font-size: 2vw;
   line-height: 86%;
+
+  margin-bottom: 32px;
+
+  @media screen and (max-width: base.$mwNormal) {
+    margin-bottom: 24px;
+  }
 }
 
 .card-text {
-  margin: 28px 40px 40px;
   font-weight: 500;
   text-align: justify;
   line-height: 130%;
@@ -86,5 +97,12 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   column-gap: 40px;
+
+  @media screen and (max-width: base.$mwNormal) {
+    bottom: 32px;
+    left: 32px;
+    width: calc(100% - 32px * 2);
+    column-gap: 32px;
+  }
 }
 </style>
