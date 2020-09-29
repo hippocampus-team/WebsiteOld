@@ -83,11 +83,9 @@ export default {
 
   display: flex;
   flex-direction: column;
-  gap: base.$unit / 2;
 
   @media screen and (max-width: base.$mwNormal) {
     top: 0;
-    gap: 0;
   }
 }
 

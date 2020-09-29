@@ -30,7 +30,7 @@ export default {
 
   p {
     font-weight: 400;
-    text-align: justify;
+    text-align: start;
     line-height: 140%;
     font-size: 1.4vw;
   }

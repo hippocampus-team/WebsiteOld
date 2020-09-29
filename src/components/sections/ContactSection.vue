@@ -50,7 +50,7 @@ export default {
 
 <style scoped lang="scss">
 .contact-form-wrapper {
-  padding: 80px;
+  padding: 80px 80px 0;
 
   @include base.default-box-shadow();
   background-color: base.$surfaceColor;
@@ -71,7 +71,14 @@ export default {
   .contacts-wrapper {
     display: flex;
     flex-direction: column;
-    row-gap: 80px;
+
+    .title-wrapper {
+      margin-bottom: 80px;
+
+      @media screen and (max-width: base.$mwMedium) {
+        margin-bottom: 56px;
+      }
+    }
   }
 }
 

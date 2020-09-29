@@ -75,7 +75,10 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  row-gap: base.$unit / 2;
   justify-content: space-between;
+
+  .card {
+    margin-bottom: base.$unit / 2;
+  }
 }
 </style>

@@ -96,13 +96,20 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  column-gap: 40px;
+
+  .card-button:nth-of-type(2) {
+    margin-left: 40px;
+  }
 
   @media screen and (max-width: base.$mwNormal) {
     bottom: 32px;
     left: 32px;
     width: calc(100% - 32px * 2);
-    column-gap: 32px;
+
+
+    .card-button:nth-of-type(2) {
+      margin-left: 32px;
+    }
   }
 }
 </style>
