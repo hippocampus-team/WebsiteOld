@@ -72,7 +72,7 @@ export default {
 <style scoped lang="scss">
 .content-wrapper {
   margin-top: base.$unit * 1.5;
-  margin-bottom: base.$unit / 2;
+  margin-bottom: base.$unit;
 
   display: flex;
   flex-direction: row;
@@ -108,7 +108,7 @@ export default {
   z-index: -1;
 
   width: base.$unit * 6.3;
-  height: base.$unit * 5.3;
+  height: base.$unit * 5.8;
 
   background: url("../../assets/contact-blob.svg") 0 0/100% auto no-repeat;
 }
