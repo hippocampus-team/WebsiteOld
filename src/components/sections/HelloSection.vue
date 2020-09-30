@@ -5,7 +5,7 @@
                  uppertext="Команда" uppertextColor="primary"/>
 
       <div class="hello-text-wrapper">
-        <p class="hello-text"><span>Лучшая команда</span> на этом свете. Сделаем всё, быстро, качественно. Звоните на номер <span>2 306 306</span> для заказа эвакуатора круглосуточно :)</p>
+        <p class="hello-text" v-html="teambio"></p>
       </div>
     </div>
   </div>
@@ -18,6 +18,18 @@ export default {
   name: 'HelloSection',
   components: {
     TitleText
+  },
+  data() {
+    return {
+      teambio: "<span>Лучшая команда</span> на этом свете. Сделаем всё, быстро, качественно. Звоните на номер <span>2 306 306</span> для заказа эвакуатора круглосуточно :)"
+    }
+  },
+  mounted() {
+    fetch('https://resume-hippocampus.herokuapp.com/teambio')
+        .then(response => response.json())
+        .then(data => {
+          this.teambio = data;
+        });
   }
 }
 </script>

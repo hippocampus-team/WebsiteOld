@@ -3,7 +3,7 @@
     <div class="content-wrapper">
       <div class="contact-form-wrapper">
         <TitleText text="Email" textColor="on-surface"
-                   uppertext="Написать на" uppertextColor="on-surface"/>
+                   uppertext="Пишите на" uppertextColor="on-surface"/>
 
         <div class="contacts-wrapper">
           <TitleText v-for="(contact, i) in contacts" :key="i" class="contact"

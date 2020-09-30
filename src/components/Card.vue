@@ -3,7 +3,7 @@
     <h2 class="card-title">{{title | uppercase}}</h2>
     <p class="card-text">{{text}}</p>
 
-    <div class="buttons-wrapper" v-if="buttons.length > 0">
+    <div v-if="buttons.length > 0" class="buttons-wrapper" :class="{'alt': isAchievement}">
       <CardButton v-for="(button, i) in buttons" :key="i"
                   :text="button.text"
                   :color="button.color"
@@ -23,7 +23,7 @@ export default {
   props: {
     title: String,
     text: String,
-    buttons: Object,
+    buttons: Array,
     isAchievement: Boolean
   },
   filters: {
@@ -39,7 +39,7 @@ export default {
   position: relative;
 
   width: base.$unit * 3;
-  height: base.$unit * 3;
+  // height: base.$unit * 3;
   box-sizing: border-box;
 
   background-color: base.$surfaceColor;
@@ -48,6 +48,9 @@ export default {
   color: base.$onSurfaceColor;
   border-radius: 60px;
   padding: 40px;
+
+  display: flex;
+  flex-direction: column;
 
   transition: all 600ms;
 
@@ -61,7 +64,7 @@ export default {
     transform: translateY(-4px);
   }
 
-  @media screen and (max-width: base.$mwNormal) {
+  @media screen and (max-width: base.$mwMedium) {
     border-radius: 40px;
     padding: 32px;
   }
@@ -74,7 +77,7 @@ export default {
 
   margin-bottom: 32px;
 
-  @media screen and (max-width: base.$mwNormal) {
+  @media screen and (max-width: base.$mwMedium) {
     margin-bottom: 24px;
   }
 }
@@ -84,28 +87,36 @@ export default {
   text-align: justify;
   line-height: 130%;
 
+  overflow: hidden;
+  flex-grow: 1;
+
   font-size: 1.2vw;
 }
 
 .buttons-wrapper {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  width: calc(100% - 40px * 2);
+  width: 100%;
+  margin-top: 40px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
+  &.alt {
+    .card-button {
+      background-color: base.$surfaceColor !important;
+
+      h3 {
+        color: base.$secondaryColor !important;
+      }
+    }
+  }
+
   .card-button:nth-of-type(2) {
     margin-left: 40px;
   }
 
-  @media screen and (max-width: base.$mwNormal) {
-    bottom: 32px;
-    left: 32px;
-    width: calc(100% - 32px * 2);
-
+  @media screen and (max-width: base.$mwMedium) {
+    margin-top: 36px;
 
     .card-button:nth-of-type(2) {
       margin-left: 32px;

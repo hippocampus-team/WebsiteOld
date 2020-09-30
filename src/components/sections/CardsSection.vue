@@ -4,7 +4,7 @@
       <Card v-for="(card, i) in cards" :key="i"
             :title="card.title"
             :text="card.text"
-            :isAchievement="card.isAchievement"
+            :isAchievement="card.isAlternative"
             :buttons="card.buttons"/>
     </div>
   </div>
@@ -20,50 +20,16 @@ export default {
   },
   data() {
     return {
-      cards: [
-        {
-          title: "Screen Puzzle",
-          text: "Приложение Сони, которое позволяет собирать мобильные видеостены самых различных форм из подручных Android устройств.",
-          isAlternative: false,
-          buttons: [
-            {
-              text: "Видео",
-              color: "#333333",
-              link: "https://youtu.be/yk01QIdEeVM"
-            },
-            {
-              text: "GitHub",
-              color: "#FF4F6D",
-              link: "https://github.com/DablSi/Screen-3.0"
-            }
-          ]
-        },
-        {
-          title: "More Content",
-          text: "More text!",
-          isAchievement: false,
-          buttons: []
-        },
-        {
-          title: "Title",
-          text: "text!",
-          isAchievement: false,
-          buttons: []
-        },
-        {
-          title: "Title",
-          text: "text!",
-          isAchievement: false,
-          buttons: []
-        },
-        {
-          title: "Title",
-          text: "text!",
-          isAchievement: true,
-          buttons: []
-        },
-      ]
+      cards: []
     }
+  },
+  mounted() {
+    fetch('https://resume-hippocampus.herokuapp.com/cards')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          this.cards = data;
+        });
   }
 }
 </script>
