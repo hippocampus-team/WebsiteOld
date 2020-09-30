@@ -1,5 +1,5 @@
 <template>
-  <a class="card-button" :style="{ background: color }" :href="link">
+  <a class="card-button" :href="link">
     <h3>{{text | uppercase}}</h3>
   </a>
 </template>
@@ -9,7 +9,6 @@ export default {
   name: 'CardButton',
   props: {
     text: String,
-    color: String,
     link: String
   },
   filters: {
@@ -24,6 +23,7 @@ export default {
 .card-button {
   padding: 20px 0;
 
+  background-color: base.$secondaryColor;
   text-decoration: none;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   border-radius: 40px;
@@ -41,8 +41,8 @@ export default {
   }
 
   &:hover {
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    transform: translateY(-4px);
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
   }
 
   &:focus {

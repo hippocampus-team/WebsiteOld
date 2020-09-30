@@ -51,7 +51,7 @@ export default {
     }
   },
   mounted() {
-    fetch('https://resume-hippocampus.herokuapp.com/bios')
+    fetch('https://cv-hippocampus.herokuapp.com/bios')
         .then(response => response.json())
         .then(data => {
           this.bios = data;
@@ -77,8 +77,11 @@ export default {
 .bios-wrapper {
   display: flex;
   flex-direction: row;
-  gap: base.$unit;
   margin-right: base.$unit;
+
+  div:nth-of-type(2) {
+    margin-left: base.$unit;
+  }
 }
 
 .bio-avatars-wrapper {

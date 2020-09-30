@@ -24,7 +24,7 @@ export default {
     }
   },
   mounted() {
-    fetch('https://resume-hippocampus.herokuapp.com/cards')
+    fetch('https://cv-hippocampus.herokuapp.com/cards')
         .then(response => response.json())
         .then(data => {
           console.log(data);

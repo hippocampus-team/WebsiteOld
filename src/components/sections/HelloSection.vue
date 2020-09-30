@@ -25,7 +25,7 @@ export default {
     }
   },
   mounted() {
-    fetch('https://resume-hippocampus.herokuapp.com/teambio')
+    fetch('https://cv-hippocampus.herokuapp.com/teambio')
         .then(response => response.json())
         .then(data => {
           this.teambio = data;

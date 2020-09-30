@@ -27,14 +27,10 @@ export default {
       contacts: [
         {
           email: "levada.an@yandex.ru",
-          name: "Всем"
-        },
-        {
-          email: "levada.an@yandex.ru",
           name: "Андрею"
         },
         {
-          email: "levada.an@yandex.ru",
+          email: "duck.shelter@gmail.com",
           name: "Соне"
         }
       ]
@@ -44,6 +40,13 @@ export default {
     emailToMailtoLink(email) {
       return "mailto:" + email;
     }
+  },
+  mounted() {
+    fetch('https://cv-hippocampus.herokuapp.com/contacts')
+        .then(response => response.json())
+        .then(data => {
+          this.contacts = data;
+        });
   }
 }
 </script>
