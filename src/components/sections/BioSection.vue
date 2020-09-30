@@ -70,7 +70,7 @@ export default {
 }
 
 .bio-title {
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: base.$unit;
 }
 

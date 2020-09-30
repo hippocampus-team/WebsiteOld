@@ -27,7 +27,6 @@ export default {
     fetch('https://cv-hippocampus.herokuapp.com/cards')
         .then(response => response.json())
         .then(data => {
-          console.log(data);
           this.cards = data;
         });
   }

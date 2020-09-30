@@ -5,7 +5,7 @@
                  uppertext="Команда" uppertextColor="primary"/>
 
       <div class="hello-text-wrapper">
-        <p class="hello-text" v-html="teambio"></p>
+        <p class="hello-text">{{teambio}}</p>
       </div>
     </div>
   </div>
@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      teambio: "<span>Лучшая команда</span> на этом свете. Сделаем всё, быстро, качественно. Звоните на номер <span>2 306 306</span> для заказа эвакуатора круглосуточно :)"
+      teambio: "В человеческом мозге гипокамп (hippocampus) отвечает за формирование эмоций. Мы же отвечаем за то, чтобы наша работа сделала их только положительными."
     }
   },
   mounted() {
@@ -73,10 +73,6 @@ export default {
     @media screen and (max-width: base.$mwMedium) {
       font-size: 24px;
       line-height: 40px;
-    }
-
-    span {
-      color: base.$secondaryColor;
     }
   }
 }

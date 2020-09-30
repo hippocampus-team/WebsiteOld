@@ -1,16 +1,25 @@
 <template>
   <div id="contact-section" class="section">
     <div class="content-wrapper">
-      <div class="contact-form-wrapper">
-        <TitleText text="Email" textColor="on-surface"
-                   uppertext="Пишите на" uppertextColor="on-surface"/>
+      <div class="contacts-email-wrapper">
+        <TitleText text="Email" textColor="on-background"
+                   uppertext="Написать нам на" uppertextColor="on-background"/>
 
-        <div class="contacts-wrapper">
-          <TitleText v-for="(contact, i) in contacts" :key="i" class="contact"
-                     :text="contact.name" textColor="on-surface"
-                     :uppertext="contact.email" uppertextColor="primary"
-                     :upperLink="contact.email | emailToMailtoLink"/>
-        </div>
+        <Contact v-for="(contact, i) in contacts" :key="i"
+                 :name="contact.name" :info="contact.email"
+                 :link="contact.email | emailToMailtoLink"
+                 textColor="on-background"/>
+      </div>
+
+      <div class="contacts-tg-wrapper">
+        <TitleText text="Telegram" textColor="on-secondary"
+                   uppertext="Или в" uppertextColor="on-secondary"
+                   :reverseAlign="true"/>
+
+        <Contact v-for="(contact, i) in contacts" :key="i"
+                 :name="contact.name" :info="contact.tg | at"
+                 :link="contact.tg | tgToLink"
+                 textColor="on-secondary" :reverseAlign="true"/>
       </div>
     </div>
   </div>
@@ -19,18 +28,21 @@
 <script>
 
 import TitleText from "@/components/TitleText";
+import Contact from "@/components/Contact";
 export default {
   name: 'ContactSection',
-  components: {TitleText},
+  components: {Contact, TitleText},
   data() {
     return {
       contacts: [
         {
           email: "levada.an@yandex.ru",
+          tg: "not_hello_world",
           name: "Андрею"
         },
         {
           email: "duck.shelter@gmail.com",
+          tg: "DablSi",
           name: "Соне"
         }
       ]
@@ -39,6 +51,12 @@ export default {
   filters: {
     emailToMailtoLink(email) {
       return "mailto:" + email;
+    },
+    tgToLink(username) {
+      return "tg://resolve?domain=" + username;
+    },
+    at(value) {
+      return "@" + value;
     }
   },
   mounted() {
@@ -52,40 +70,46 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.contact-form-wrapper {
-  padding: 80px 80px 0;
-
-  @include base.default-box-shadow();
-  background-color: base.$surfaceColor;
-  border-radius: 60px;
+.content-wrapper {
+  margin-top: base.$unit * 1.5;
+  margin-bottom: base.$unit / 2;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  @media screen and (max-width: base.$mwMedium) {
-    padding: 56px;
-  }
+  .title-wrapper {
+    margin-bottom: 80px;
 
-  @media screen and (max-width: base.$mwNormal) {
-    border-radius: 40px;
-  }
-
-  .contacts-wrapper {
-    display: flex;
-    flex-direction: column;
-
-    .title-wrapper {
-      margin-bottom: 80px;
-
-      @media screen and (max-width: base.$mwMedium) {
-        margin-bottom: 56px;
-      }
+    @media screen and (max-width: base.$mwLarge) {
+      margin-bottom: 60px;
     }
+
+    @media screen and (max-width: base.$mwMedium) {
+      margin-bottom: 48px;
+    }
+
+    @media screen and (max-width: base.$mwNormal) {
+      margin-bottom: 36px;
+    }
+  }
+
+  .contact-wrapper {
+    margin-bottom: 28px;
   }
 }
 
-.content-wrapper {
-  margin-bottom: base.$unit;
+.section:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  z-index: -1;
+
+  width: base.$unit * 6.3;
+  height: base.$unit * 5.3;
+
+  background: url("../../assets/contact-blob.svg") 0 0/100% auto no-repeat;
 }
 </style>

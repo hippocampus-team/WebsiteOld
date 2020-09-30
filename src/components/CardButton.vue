@@ -1,5 +1,5 @@
 <template>
-  <a class="card-button" :href="link">
+  <a class="card-button" :href="link" target="_blank">
     <h3>{{text | uppercase}}</h3>
   </a>
 </template>
