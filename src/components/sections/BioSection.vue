@@ -2,7 +2,7 @@
   <div id="bio-section" class="section">
     <div class="content-wrapper">
       <TitleText class="bio-title"
-                 text="Про нас" textColor="on-primary"
+                 text="О нас" textColor="on-primary"
                  uppertext="Немного" uppertextColor="on-primary"/>
 
       <div class="bios-wrapper">
