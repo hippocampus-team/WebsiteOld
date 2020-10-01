@@ -110,6 +110,6 @@ export default {
   width: base.$unit * 6.3;
   height: base.$unit * 5.8;
 
-  background: url("../../assets/contact-blob.svg") 0 0/100% auto no-repeat;
+  background: url("../../assets/contact-blob.png") 0 0/100% auto no-repeat;
 }
 </style>

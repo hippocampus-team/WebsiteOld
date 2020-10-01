@@ -114,6 +114,7 @@ export default {
 }
 
 #bio-section {
+  margin-top: base.$unit;
   height: base.$unit * 10;
   overflow: visible;
 }
@@ -127,7 +128,7 @@ export default {
   width: 100vw;
   height: base.$unit * 10;
 
-  background: url("../../assets/bio-blob.svg") 0 0/100% auto no-repeat;
+  background: url("../../assets/bio-blob.png") 0 0/100% auto no-repeat;
   z-index: 0;
   overflow: visible;
 }
